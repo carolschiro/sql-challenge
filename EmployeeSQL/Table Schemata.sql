@@ -73,11 +73,3 @@ REFERENCES "employees" ("emp_no");
 ALTER TABLE "dept_emp" ADD CONSTRAINT "fk_dept_emp_dept_no" FOREIGN KEY("dept_no")
 REFERENCES "departments" ("dept_no");
 
---List the following details of each employee: employee number, last name, first name, sex, and salary.
-SELECT employees.emp_no AS "Employee Number",
-	employees.last_name AS "Last Name",
-	employees.first_name AS "First Name",
-	employees.sex As "Sex",
-	salaries.salary As "Salary"
-FROM employees
-INNER JOIN salaries on salaries.emp_no = employees.emp_no;
